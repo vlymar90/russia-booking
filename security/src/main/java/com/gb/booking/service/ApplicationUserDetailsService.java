@@ -20,7 +20,7 @@ public class ApplicationUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         final Optional<User> user = userRepository.findByName(username);
-        if(user.isEmpty()) {
+        if(!user.isPresent()) {
             throw new UsernameNotFoundException("пользователь с именем = " + username + " не найден");
         }
         return new org.springframework.security.core.userdetails.User(user.get().getName(), user.get().getPassword(), Collections.emptyList());
