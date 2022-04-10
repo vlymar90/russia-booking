@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active:
+    include:
+      database
+#      api,
+#      service
+  application:
+    name: booking
+server:
+  port: ${SERVER_PORT}

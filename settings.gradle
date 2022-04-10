@@ -1,0 +1,8 @@
+rootProject.name = 'russia-booking'
+
+include(':application')
+include(':database')
+include(':api')
+include(':service')
+include('security')
+

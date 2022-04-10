@@ -1,0 +1,30 @@
+.DS_Store
+
+tmp.*
+java_*.hprof
+
+build/
+.gradle/
+
+# IDEA
+.idea/*
+!.idea/vcs.xml
+!.idea/GitLinkConfig.xml
+!.idea/externalDependencies.xml
+!.idea/sqldialects.xml
+!.idea/detekt.xml
+!.idea/runConfigurations.xml
+!.idea/gradle.xml
+!.idea/encodings.xml
+!.idea/compiler.xml
+
+# NodeJS
+node_modules/
+
+#
+external-services/geoip/
+
+#
+.env.*
+/secrets/
+

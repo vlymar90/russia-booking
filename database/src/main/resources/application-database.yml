@@ -1,0 +1,20 @@
+spring:
+    datasource:
+        hikari:
+            allow-pool-suspension: true
+            maximum-pool-size: 2
+        password: ${DB_PASSWORD}
+        driver-class-name: org.postgresql.Driver
+        url: ${DB_URL}
+        username: ${DB_USER}
+    flyway:
+        password: ${DB_PASSWORD}
+        schemas: booking
+        url: ${DB_URL}
+        user: ${DB_USER}
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        open-in-view: true
+        show-sql: true
+
