@@ -22,6 +22,8 @@ repositories {
 }
 
 dependencies {
-    implementation project(':database')
-    implementation project(':api')
+    api project(':database')
+    api project(':api')
+    api project(':security')
 }
+

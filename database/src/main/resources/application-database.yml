@@ -14,7 +14,14 @@ spring:
         user: ${DB_USER}
     jpa:
         hibernate:
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
             ddl-auto: validate
+
         open-in-view: true
         show-sql: true
+        properties:
+            hibernate:
+                default_schema: booking
 
