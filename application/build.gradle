@@ -3,7 +3,9 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
-
+tasks.withType(JavaCompile) {
+    options.fork = true
+}
 task stage(dependsOn: ['build', 'clean'])
 
 subprojects {
