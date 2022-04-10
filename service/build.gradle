@@ -24,9 +24,15 @@ subprojects {
     apply from: file("$rootProject.projectDir/gradle/heroku/stage.gradle")
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 group = 'com.gb.booking.service'
 version = '1.0.0-SNAPSHOT'
-sourceCompatibility = '11.0.13'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()

@@ -24,7 +24,7 @@ subprojects {
 
         group = 'com.gb.booking.application'
 version = '1.0.0-SNAPSHOT'
-sourceCompatibility = '11.0.13'
+sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
