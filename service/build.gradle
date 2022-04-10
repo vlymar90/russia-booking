@@ -12,10 +12,17 @@ jar {
     enabled = true
 }
 
+task stage(dependsOn: ['build', 'clean'])
+
+
+subprojects {
+
+    apply from: file("$rootProject.projectDir/gradle/heroku/stage.gradle")
+}
 
 group = 'com.gb.booking.service'
 version = '1.0.0-SNAPSHOT'
-sourceCompatibility = '11.0.0'
+sourceCompatibility = '11.0.13'
 
 repositories {
     mavenCentral()
